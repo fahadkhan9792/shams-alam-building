@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shams Alam Building Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+<h1>🏢 Shams Alam Building</h1>
+<p>Owner Dashboard</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>🏠 Flat 1</h2>
+<input type="text" placeholder="Tenant Name">
+<p>Rent : ₹4500</p>
+<input type="number" id="bill1" placeholder="Electricity Bill">
+<button onclick="calculateTotal('bill1',4500,'total1')">Save Bill</button>
+<p class="total" id="total1">Total : ₹4500</p>
+</div>
+
+<div class="card">
+<h2>🏠 Flat 2</h2>
+<input type="text" placeholder="Tenant Name">
+<p>Rent : ₹4000</p>
+<input type="number" id="bill2" placeholder="Electricity Bill">
+<button onclick="calculateTotal('bill2',4000,'total2')">Save Bill</button>
+<p class="total" id="total2">Total : ₹4000</p>
+</div>
+
+<div class="card">
+<h2>🏠 Flat 3</h2>
+<input type="text" placeholder="Tenant Name">
+<p>Rent : ₹4000</p>
+<input type="number" id="bill3" placeholder="Electricity Bill">
+<button onclick="calculateTotal('bill3',4000,'total3')">Save Bill</button>
+<p class="total" id="total3">Total : ₹4000</p>
+</div>
+
+<div class="card">
+<h2>🏠 Flat 4</h2>
+<input type="text" placeholder="Tenant Name">
+<p>Rent : ₹4000</p>
+<input type="number" id="bill4" placeholder="Electricity Bill">
+<button onclick="calculateTotal('bill4',4000,'total4')">Save Bill</button>
+<p class="total" id="total4">Total : ₹4000</p>
+</div>
+<script>
+function calculateTotal(inputId, rent, totalId) {
+    let bill = Number(document.getElementById(inputId).value) || 0;
+    let total = rent + bill;
+    document.getElementById(totalId).innerHTML = "Total : ₹" + total;
+}
+</script>
+
+</body>
+</html>
